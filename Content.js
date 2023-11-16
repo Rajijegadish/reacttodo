@@ -39,6 +39,7 @@ const Content = () =>{
     
     return (
       <main>
+      {(items.length)?(
         <ul>
           {items.map((item)=> ( 
           <li className="item" key={(item.id)}>
@@ -56,6 +57,10 @@ const Content = () =>{
           </li>)
           )}
         </ul>
+            ):(
+              <p style={{marginTop:'2rem'}}> your list is Empty</p>
+              )
+              }
           </main> 
     )  
        }    
